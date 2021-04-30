@@ -53,16 +53,20 @@ window.addEventListener("resize", () => {
     }
 });
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY >= 800) {
-        header.classList.add("translateY");
-        setTimeout(() => {
-            header.classList.add("header-scrolled");
-        }, 500);
+window.addEventListener("scroll", (e) => {
+    if (window.scrollY > 600) {
+        header.classList.add("header-scrolled");
     } else {
-        header.classList.remove("header-scrolled");
         header.classList.remove("translateY");
+        header.classList.remove("header-scrolled");
     }
+});
+
+// Handle scroll Up and Down
+window.addEventListener("wheel", (e) => {
+    e.wheelDelta >= 0 && header.classList.contains("header-scrolled")
+        ? header.classList.add("translateY")
+        : header.classList.remove("translateY");
 });
 
 signature.addEventListener("click", () => {

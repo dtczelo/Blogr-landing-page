@@ -44,6 +44,14 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: calc(clamp(1rem, -1.875rem + 9.375vw, 1.2rem));
+}
+
+h3 {
+    font-size: calc(clamp(1.3rem, -0.875rem + 9.375vw, 1.7rem));
+}
+
 // LAYOUTS //
 
 .dropdown-menu {
@@ -301,14 +309,13 @@ a {
     align-items: center;
     text-align: center;
     &__title {
-        // margin-top: 6rem;
         font-size: calc(clamp(2rem, -0.875rem + 9.375vw, 4rem));
         font-weight: 600;
         z-index: 2;
     }
     &__text {
         margin: 3rem 0;
-        font-size: 1.3rem;
+        font-size: calc(clamp(1rem, -0.875rem + 9.375vw, 1.5rem));
         opacity: 0.8;
     }
     &__cta {
@@ -342,7 +349,7 @@ a {
     padding: 6rem 0 8rem 0;
     z-index: -2;
     &__title {
-        font-size: calc(clamp(1rem, -0.875rem + 9.375vw, 2rem)); // a fignoler
+        font-size: calc(clamp(1.6rem, -0.875rem + 9.375vw, 3rem));
         padding-bottom: 2rem;
         text-align: center;
     }
@@ -354,12 +361,6 @@ a {
     }
     &__content {
         text-align: center;
-        & h3 {
-            font-size: calc(clamp(1.3rem, -0.875rem + 9.375vw, 1.7rem)); // a fignoler
-        }
-        & p {
-            font-size: calc(clamp(0.8rem, -0.875rem + 9.375vw, 1rem));
-        }
     }
     &__img {
         flex: 1;
@@ -434,12 +435,6 @@ a {
     }
     &__content {
         text-align: center;
-        & h3 {
-            font-size: calc(clamp(1.3rem, -0.875rem + 9.375vw, 1.7rem)); // a fignoler
-        }
-        & p {
-            font-size: calc(clamp(0.8rem, -0.875rem + 9.375vw, 1rem));
-        }
     }
     &__img {
         flex: 1;
@@ -536,7 +531,6 @@ a {
     padding: 0 3rem;
     background: rgb(255, 143, 112);
     background: linear-gradient(140deg, rgba(255, 143, 112, 1) 0%, rgba(255, 61, 84, 0.986) 85%);
-    transform: translateY(0);
 }
 
 .section {
