@@ -196,14 +196,18 @@ h3 {
 
 .header {
     position: relative;
-    @extend %container-fluid;
     height: 20vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 4;
     transform: translateY(0);
     transition: transform 0.4s ease;
+    &__wrapper {
+        @extend %container-fluid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     &__logo-container {
         margin-right: 3rem;
     }
@@ -350,7 +354,6 @@ h3 {
     z-index: -2;
     &__title {
         font-size: calc(clamp(1.6rem, -0.875rem + 9.375vw, 3rem));
-        padding-bottom: 2rem;
         text-align: center;
     }
     &__container {
@@ -358,6 +361,7 @@ h3 {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     &__content {
         text-align: center;
@@ -392,8 +396,10 @@ h3 {
     &__img-container {
         width: 100%;
         height: 15vh;
+        margin: 0 auto;
         position: relative;
         top: -200px;
+        transform: translateX(0);
         text-align: left;
         & img {
             position: absolute;
@@ -432,6 +438,7 @@ h3 {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     &__content {
         text-align: center;
@@ -600,7 +607,8 @@ h3 {
 @media (min-width: 475px) {
     .second-section {
         &__img-container {
-            height: 40vh;
+            width: 80%;
+            height: 30vh;
         }
     }
 }
@@ -608,7 +616,7 @@ h3 {
 @media (min-width: 630px) {
     .second-section {
         &__img-container {
-            height: 60vh;
+            height: 44vh;
         }
     }
 }
@@ -629,9 +637,11 @@ h3 {
         &__container {
             flex-direction: row-reverse;
         }
+        &__title {
+            margin-bottom: 0;
+        }
         &__content {
-            width: 55%;
-            padding-right: 8rem;
+            width: 50%;
             text-align: left;
             & p {
                 margin-bottom: 4rem;
@@ -639,16 +649,16 @@ h3 {
         }
         &__img {
             & img {
-                position: absolute;
-                top: 6%;
-                right: -18%;
-                width: 60%;
+                position: relative;
+                left: 5%;
+                width: 170%;
                 z-index: -2;
             }
         }
     }
 
     .second-section {
+        text-align: left;
         &__container {
             flex-direction: row;
         }
@@ -656,6 +666,10 @@ h3 {
             width: 50%;
             height: 20vh;
             position: relative;
+            transform: translateX(-40px);
+        }
+        &__content {
+            width: 50%;
         }
         &__bg {
             background-position: -150px -400px;
@@ -667,8 +681,7 @@ h3 {
             flex-direction: row;
         }
         &__content {
-            width: 55%;
-            padding-left: 8rem;
+            width: 50%;
             text-align: left;
             & p {
                 margin-bottom: 4rem;
@@ -676,10 +689,9 @@ h3 {
         }
         &__img {
             & img {
-                position: absolute;
-                top: 6%;
-                left: -17%;
-                width: 60%;
+                position: relative;
+                left: -75%;
+                width: 170%;
                 z-index: -2;
             }
         }
